@@ -1,0 +1,85 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    .App {
+        header {
+            display: flex;
+            justify-content: space-between;
+            color: white;
+            #logo {
+                cursor: pointer;
+                user-select: none;
+                color: white;
+                font-size: 2em;
+                font-weight: bolder;
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            }
+            #switchDisplay {
+                display: flex;
+                gap: 1em;
+                align-items: center;
+            }
+        }
+        #homeContent {
+            padding: 1em;
+            h1 {
+                text-align: center;
+            }
+            .homeList {
+                padding-top: 1em;
+                padding-bottom: 1em;
+                display: flex;
+                flex-direction: column;
+                gap: 0.7em;
+            }
+        }
+        .ant-layout-sider-children {
+            height: 100%;
+            overflow: auto;
+          }
+        .country {
+            padding: 1em;
+            .article {
+                cursor: pointer;
+                user-select: none;
+            }
+            .ant-card-meta-title {
+                white-space: pre-line;
+            }
+        }
+        footer {
+            background-color: #001529;
+            color: white;
+            #footerWrapper {
+                display: flex;
+                > * {
+                    flex: 1;
+                    height: 7vh;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+            } 
+        }
+    }   
+}
+::-webkit-scrollbar {
+    width: 20px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey; 
+    border-radius: 10px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #15325b; 
+    border-radius: 10px;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: #15417e; 
+    cursor: pointer;
+  }
