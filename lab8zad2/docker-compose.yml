@@ -1,0 +1,23 @@
+version: "3.8"
+services:
+  db:
+    container_name: db
+    image: redis
+    ports:
+      - 6379:6379
+    networks:
+      - some-network
+  server:
+    container_name: server
+    build: server
+    depends_on:
+      - db
+    ports:
+      - 3000:3000
+    networks:
+      - some-network
+networks:
+  some-network:
+    name: some-network
+    external: false
+    
